@@ -17,6 +17,8 @@ type BrowseEntry struct {
 	Type      string
 	Domain    string
 	Text      map[string]string
+	Host      string
+	Port      int
 }
 
 type AddFunc func(BrowseEntry)
@@ -93,6 +95,8 @@ func lookupType(ctx context.Context, service string, conn MDNSConn, add AddFunc,
 							Type:      srv.Type,
 							Domain:    srv.Domain,
 							Text:      srv.Text,
+							Host:      srv.Host,
+							Port:      srv.Port,
 						}
 						es = append(es, &e)
 						add(e)
