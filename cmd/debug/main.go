@@ -4,7 +4,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/brutella/dnssd"
+	"github.com/mrbuk/dnssd"
 	"os"
 	"os/signal"
 	"time"
